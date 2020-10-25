@@ -98,6 +98,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     
+    @IBAction func dataEntered(_ sender: UITextField) {
+        print(#line, #function, sender.tag, sender.text ?? "nil")
+    }
+    
+   
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        sender.value = Float(25 * Int(sender.value / 25))
+        print(sender.value)
+    }
+    
+    @IBAction func switchToggled(_ sender: UISwitch) {
+        view.backgroundColor = sender.isOn ? .white : .gray
+    }
     
 }
 
